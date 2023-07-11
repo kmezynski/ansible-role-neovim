@@ -1,6 +1,12 @@
 ---
 default_stages: [commit]
 
+ci:
+  autoupdate_commit_msg: "chore: pre-commit autoupdate"
+  autoupdate_schedule: monthly
+  autofix_commit_msg: |
+    chore: auto fixes from pre-commit.com hooks
+
 repos:
   - repo: meta
     hooks:
