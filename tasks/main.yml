@@ -1,0 +1,49 @@
+---
+- name: Include OS-specific variables.
+  ansible.builtin.include_vars: "{{ ansible_os_family }}.yml"
+
+- name: Include OS-specific setup tasks.
+  ansible.builtin.include_tasks: "setup-{{ ansible_os_family }}.yml"
+
+- name: Ensure Neovim repository is cloned.
+  ansible.builtin.git:
+    repo: https://github.com/neovim/neovim.git
+    dest: /tmp/neovim
+    version: "{{ neovim_git_ref }}"
+    single_branch: true
+
+- name: Build and install Nevoim.
+  become: true
+  ansible.builtin.shell:
+    cmd: |
+      make CMAKE_BUILD_TYPE=Release CMAKE_INSTALL_PREFIX={{ neovim_path }}
+      make install
+    chdir: /tmp/neovim
+  args:
+    creates: "{{ neovim_path }}/bin/nvim"
+
+- name: Install plugin manager for Neovim.
+  ansible.builtin.git:
+    repo: https://github.com/wbthomason/packer.nvim
+    dest: "{{ ansible_user_dir }}/.local/share/nvim/site/pack/packer/start/packer.nvim"
+    version: master
+    single_branch: true
+
+- name: Install linter for Lua.
+  ansible.builtin.command: luarocks install luacheck
+  args:
+    creates: /usr/local/bin/luacheck
+
+- name: Ensure directory for Packer config exists.
+  ansible.builtin.file:
+    path: "{{ neovim_packer_config_path }}"
+    state: directory
+    mode: 0771
+  when: neovim_packer
+
+- name: Load Packer config to {{ neovim_packer_config_path }}.
+  ansible.builtin.copy:
+    src: packer.lua
+    dest: "{{ neovim_packer_config_path }}"
+    mode: 0644
+  when: neovim_packer

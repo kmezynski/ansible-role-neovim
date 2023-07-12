@@ -1,0 +1,6 @@
+---
+- name: Ensure Neovim build dependencies are installed.
+  become: true
+  ansible.builtin.yum:
+    name: "{{ neovim_packages }}"
+    state: present

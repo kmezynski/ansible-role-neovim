@@ -1,0 +1,11 @@
+---
+neovim_packages:
+  - git
+  - ninja-build
+  - cmake
+  - make
+  - gcc
+  - unzip
+  - gettext
+  - curl
+  - luarocks
