@@ -1,0 +1,8 @@
+---
+# neovim installation
+neovim_git_ref: master
+neovim_path: /usr/local
+
+# neovim packer configuration
+neovim_packer: false
+neovim_packer_config_path: "{{ ansible_user_dir }}/.config/nvim/lua/custom"
