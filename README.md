@@ -1,3 +1,4 @@
+[![CI](https://github.com/kmezynski/ansible-role-neovim/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/kmezynski/ansible-role-neovim/actions/workflows/ci.yml)
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/kmezynski/ansible-role-neovim/master.svg)](https://results.pre-commit.ci/latest/github/kmezynski/ansible-role-neovim/master)
 
 # Ansible Role: Neovim
