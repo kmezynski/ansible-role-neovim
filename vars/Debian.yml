@@ -6,4 +6,5 @@ neovim_packages:
   - unzip
   - gettext
   - curl
+  - lua
   - luarocks
