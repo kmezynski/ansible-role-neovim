@@ -8,6 +8,5 @@ neovim_packages:
   - unzip
   - gettext
   - curl
-  - lua
   - lua-devel
   - luarocks
