@@ -6,3 +6,8 @@
     name: "{{ neovim_packages }}"
     state: present
     install_recommends: false
+
+- name: Install linter for Lua.
+  ansible.builtin.command: luarocks install luacheck
+  args:
+    creates: /usr/local/bin/luacheck
