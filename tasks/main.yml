@@ -29,11 +29,6 @@
     version: master
     single_branch: true
 
-- name: Install linter for Lua.
-  ansible.builtin.command: luarocks install luacheck
-  args:
-    creates: /usr/local/bin/luacheck
-
 - name: Ensure directory for Packer config exists.
   ansible.builtin.file:
     path: "{{ neovim_packer_config_path }}"

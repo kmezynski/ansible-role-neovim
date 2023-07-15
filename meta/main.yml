@@ -22,7 +22,10 @@ galaxy_info:
         - jammy
     - name: Fedora
       versions:
-        - all
+        - 36
+        - 37
+        - 38
+        - 39
 
   galaxy_tags:
     - neovim

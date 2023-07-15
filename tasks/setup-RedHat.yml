@@ -2,5 +2,11 @@
 - name: Ensure Neovim build dependencies are installed.
   become: true
   ansible.builtin.yum:
+    update_cache: true
     name: "{{ neovim_packages }}"
     state: present
+
+- name: Install linter for Lua.
+  ansible.builtin.command: luarocks install luacheck
+  args:
+    creates: /usr/bin/luacheck
