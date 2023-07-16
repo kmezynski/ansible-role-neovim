@@ -1,0 +1,9 @@
+---
+blank_issues_enabled: false
+contact_links:
+  - name: Discussions
+    url: https://github.com/kmezynski/kmezynski/discussions/
+    about: Submit a general question on the forum.
+  - name: Ansible Code of Conduct
+    url: https://docs.ansible.com/ansible/latest/community/code_of_conduct.html
+    about: Be nice to other members of the community. Behave.
