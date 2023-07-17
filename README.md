@@ -1,10 +1,13 @@
 [![CI](https://github.com/kmezynski/ansible-role-neovim/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/kmezynski/ansible-role-neovim/actions/workflows/ci.yml)
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/kmezynski/ansible-role-neovim/master.svg)](https://results.pre-commit.ci/latest/github/kmezynski/ansible-role-neovim/master)
+[![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
+[![Code of Conduct](https://img.shields.io/badge/code%20of%20conduct-Ansible-silver.svg)](.github/CODE_OF_CONDUCT.md)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
 
 # Ansible Role: Neovim
 
-Installs [Neovim](https://neovim.io) with or without Packer plugin manager on
-RHEL or Debian/Ubuntu servers.
+Installs [Neovim](https://neovim.io) with or without [Packer](https://github.com/wbthomason/packer.nvim)
+plugin manager on RHEL or Debian/Ubuntu servers.
 
 ## Requirements
 
