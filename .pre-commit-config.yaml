@@ -13,7 +13,7 @@ repos:
       - id: check-hooks-apply
 
   - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: v3.0.3
+    rev: v4.0.0-alpha.8
     hooks:
       - id: prettier
         always_run: true
@@ -30,7 +30,7 @@ repos:
       - id: check-added-large-files
 
   - repo: https://github.com/commitizen-tools/commitizen
-    rev: 3.12.0
+    rev: v3.14.1
     hooks:
       - id: commitizen
       - id: commitizen-branch
@@ -39,12 +39,12 @@ repos:
           - push
 
   - repo: https://github.com/ansible/ansible-lint
-    rev: v6.22.0
+    rev: v6.22.2
     hooks:
       - id: ansible-lint
 
   - repo: https://github.com/adrienverge/yamllint.git
-    rev: v1.32.0
+    rev: v1.33.0
     hooks:
       - id: yamllint
         files: \.(yaml|yml)$
